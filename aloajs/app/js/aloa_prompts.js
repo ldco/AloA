@@ -1,7 +1,7 @@
-const opn = require("opn");
+
 function Prompt(w, h, promptName, promptId) {
-    let wMetric = w + heightMetric;
-    let hMetric = h + heightMetric;
+    let wMetric = w + "vh";
+    let hMetric = h + "vh";
     let basicPromptDiv = $cE("div");
     let basicPromptName = $cE("span");
     let basicPromptContent = $cE("div");
@@ -11,8 +11,8 @@ function Prompt(w, h, promptName, promptId) {
     thisPromptId = basicPromptDiv.id;
     basicPromptDiv.style.width = wMetric;
     basicPromptDiv.style.height = hMetric;
-    basicPromptDiv.style.top = "calc(50vh - " + h / 2 + heightMetric + ")";
-    basicPromptDiv.style.left = "calc(50vw - " + w / 2 + heightMetric + ")";
+    basicPromptDiv.style.top = "calc(50vh - " + h / 2 + "vh" + ")";
+    basicPromptDiv.style.left = "calc(50vw - " + w / 2 + "vh" + ")";
     basicPromptName.setAttribute("class", "promptNameSpan");
     basicPromptName.innerHTML = promptName;
     basicPromptContent.setAttribute("class", "promptContent");
@@ -207,10 +207,10 @@ function About(softName, version, developer, license, webSite) {
     aboutAlert.getElementsByClassName("promptNameSpan")[0].innerHTML = softName;
     let promptContent = aboutAlert.getElementsByClassName("promptContent")[0];
     promptContent.setAttribute("id", "aboutContentDiv");
-    promptContent.parentNode.style.height = "60" + heightMetric;
-    promptContent.parentNode.style.width = "60" + heightMetric;
-    promptContent.parentNode.style.top = "20" + heightMetric;
-    promptContent.parentNode.style.left = "calc(50" + widthMetric + " - 30" + heightMetric + ")";
+    promptContent.parentNode.style.height = "60" + "vh";
+    promptContent.parentNode.style.width = "60" + "vh";
+    promptContent.parentNode.style.top = "20" + "vh";
+    promptContent.parentNode.style.left = "calc(50" + widthMetric + " - 30" + "vh" + ")";
     let promptSpan = $("aboutAlert").getElementsByClassName("promptSpan")[0];
     promptSpan.setAttribute("id", "aboutContentSpan");
     promptSpan.innerHTML = "<img src='assets/icons/menuIconsVectors/100.svg'>";
@@ -223,7 +223,9 @@ function About(softName, version, developer, license, webSite) {
     let webSiteSpan = $cE("span");
     webSiteSpan.setAttribute("onclick", "goToWebSite()");
     goToWebSite = function () {
-        opn("http://" + webSite);
+        if (opn) { opn("http://" + webSite); }
+        else { window.location = "http://" + webSite; }
+
     }
         ;
     webSiteSpan.innerHTML = "Please visit " + "<span id='urlWebSiteSpan'>" + webSite + "</span>";
@@ -326,7 +328,7 @@ function closeSP() {
 let sP_promptContent_Height;
 function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction) {
     sP_wMetric = w + widthMetric;
-    sP_hMetric = h + heightMetric;
+    sP_hMetric = h + "vh";
     sP_basicPromptDiv = $cE("div");
     sP_basicPromptName = $cE("span");
     sP_basicPromptDiv.setAttribute("class", "sP_promptMixin");
@@ -334,7 +336,7 @@ function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction
     sP_thisPromptId = sP_basicPromptDiv.id;
     sP_basicPromptDiv.style.width = sP_wMetric;
     sP_basicPromptDiv.style.height = sP_hMetric;
-    sP_basicPromptDiv.style.top = "calc(50vh - " + h / 2 + heightMetric + ")";
+    sP_basicPromptDiv.style.top = "calc(50vh - " + h / 2 + "vh" + ")";
     sP_basicPromptDiv.style.left = "calc(50vw - " + w / 2 + widthMetric + ")";
     sP_basicPromptName.setAttribute("class", "sP_promptNameSpan");
     sP_basicPromptName.innerHTML = promptName;
