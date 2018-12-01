@@ -3,7 +3,7 @@
 ## (Yet) AnotherLevelOfAbstraction
 Libraries for simpler coding - JS, Python, PHP
 
-<img src="https://github.com/ldco/AloA/blob/master/aloaLogo.png"  height="300">
+<img src="https://github.com/ldco/AloA/blob/master/aloaLogo.png"  width="600">
 
 ##
 

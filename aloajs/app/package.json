@@ -4,6 +4,7 @@
   "description": "yet another level of abstraction",
   "main": "dist/aloajs.min.js",
   "scripts": {
+    "doc": "documentation build js/** -f html -o docs",
     "dev": "babel js -o dist/aloajs.min.js -w",
     "g": "./git.sh"
   },
@@ -26,19 +27,22 @@
   "babel": {
     "presets": [
       [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "safari >= 7"
+            ]
+          }
+        }
+      ],
+      [
         "minify",
         {
           "builtIns": false,
           "evaluate": false,
           "mangle": false
-        }
-      ],
-      [
-        "@babel/env",
-        {
-          "targets": {
-            "browsers": "last 2 versions"
-          }
         }
       ]
     ]

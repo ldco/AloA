@@ -1,0 +1,46 @@
+{
+    "name": "aloajs",
+    "version": "1.0.0",
+    "description": "yet another level of abstraction",
+    "main": "dist/aloajs.min.js",
+    "scripts": {
+        "doc": "documentation build js/** -f mn -o docs",
+        "dev": "babel js -o dist/aloajs.min.js -w",
+        "g": "./git.sh"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ldco/AloA.git"
+    },
+    "keywords": [
+        "accessibility"
+    ],
+    "author": "Louis David & Co. Design Studio",
+    "license": "LGPL-3.0",
+    "devDependencies": {
+        "@babel/cli": "^7.0.0",
+        "@babel/core": "^7.0.0",
+        "@babel/preset-env": "^7.1.6",
+        "babel-preset-minify": "^0.5.0",
+        "concurrently": "^4.1.0"
+    },
+    "babel": {
+        "presets": [
+            [
+                "minify",
+                {
+                    "builtIns": false,
+                    "evaluate": false,
+                    "mangle": false
+                }
+            ]
+        ]
+    },
+    "bugs": {
+        "url": "https://github.com/ldco/AloA/issues"
+    },
+    "homepage": "https://github.com/ldco/AloA#readme",
+    "files": [
+        "dist"
+    ]
+}
