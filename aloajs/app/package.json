@@ -1,0 +1,44 @@
+{
+  "name": "aloa",
+  "version": "1.0.0",
+  "description": "yet another level of abstraction",
+  "main": "dist/aloa.js",
+  "scripts": {
+    "dev": "babel js -o dist/thebility.js -w",
+    "g": "./git.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ldco/AloA.git"
+  },
+  "keywords": [
+    "accessibility"
+  ],
+  "author": "Louis David & Co. Design Studio",
+  "license": "LGPL-3.0",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "concurrently": "^4.1.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "browsers": "last 2 versions"
+          }
+        }
+      ]
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/ldco/AloA/issues"
+  },
+  "homepage": "https://github.com/ldco/AloA#readme",
+  "files": [
+    "dist"
+  ]
+}
