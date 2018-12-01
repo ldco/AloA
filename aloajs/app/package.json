@@ -1,10 +1,10 @@
 {
-  "name": "aloa",
+  "name": "aloajs",
   "version": "1.0.0",
   "description": "yet another level of abstraction",
-  "main": "dist/aloa.js",
+  "main": "dist/aloajs.js",
   "scripts": {
-    "dev": "babel js -o dist/thebility.js -w",
+    "dev": "babel js -o dist/aloajs.js -w",
     "g": "./git.sh"
   },
   "repository": {
