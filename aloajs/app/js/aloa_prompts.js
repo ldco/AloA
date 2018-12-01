@@ -1,11 +1,11 @@
 const opn = require("opn");
 function Prompt(w, h, promptName, promptId) {
-    wMetric = w + heightMetric;
-    hMetric = h + heightMetric;
-    basicPromptDiv = $cE("div");
-    basicPromptName = $cE("span");
-    basicPromptContent = $cE("div");
-    promptButtonsDiv = $cE("div");
+    let wMetric = w + heightMetric;
+    let hMetric = h + heightMetric;
+    let basicPromptDiv = $cE("div");
+    let basicPromptName = $cE("span");
+    let basicPromptContent = $cE("div");
+    let promptButtonsDiv = $cE("div");
     basicPromptDiv.setAttribute("class", "promptMixin");
     basicPromptDiv.setAttribute("id", promptId);
     thisPromptId = basicPromptDiv.id;
@@ -53,7 +53,7 @@ function Prompt(w, h, promptName, promptId) {
     }
         ;
     this.promptWindow = function (w, h) {
-        promptWindow = $cE("div");
+        let promptWindow = $cE("div");
         promptWindow.setAttribute("class", "promptWindow");
         promptWindow.setAttribute("id", "promptWindow");
         promptWindow.style["text-align"] = direction;
@@ -63,8 +63,8 @@ function Prompt(w, h, promptName, promptId) {
     }
         ;
     this.promptInput = function (inputHeader, inputType, inputPattern, req, counter) {
-        inputId = thisPromptId + "_input";
-        inputName = inputId;
+        let inputId = thisPromptId + "_input";
+        let inputName = inputId;
         promptInputDiv = $cE("div");
         promptInputDiv.setAttribute("class", "inputDiv");
         promptInputDiv.style["text-align"] = direction;
@@ -74,7 +74,7 @@ function Prompt(w, h, promptName, promptId) {
         promptInput.setAttribute("class", "inputClass");
         promptInput.setAttribute("type", inputType);
         promptInput.setAttribute("pattern", inputPattern);
-        inputHeaderSpan = $cE("span");
+        let inputHeaderSpan = $cE("span");
         inputHeaderSpan.innerHTML = inputHeader;
         basicPromptContent.appendChild(promptInputDiv);
         promptInputDiv.appendChild(inputHeaderSpan);

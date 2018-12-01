@@ -2,9 +2,9 @@
   "name": "aloajs",
   "version": "1.0.0",
   "description": "yet another level of abstraction",
-  "main": "dist/aloajs.js",
+  "main": "dist/aloajs.min.js",
   "scripts": {
-    "dev": "babel js -o dist/aloajs.js -w",
+    "dev": "babel js -o dist/aloajs.min.js -w",
     "g": "./git.sh"
   },
   "repository": {
@@ -20,10 +20,19 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
+    "babel-preset-minify": "^0.5.0",
     "concurrently": "^4.1.0"
   },
   "babel": {
     "presets": [
+      [
+        "minify",
+        {
+          "builtIns": false,
+          "evaluate": false,
+          "mangle": false
+        }
+      ],
       [
         "@babel/env",
         {
