@@ -1,4 +1,3 @@
-
 function Prompt(w, h, promptName, promptId) {
     let wMetric = w + "vh";
     let hMetric = h + "vh";
@@ -31,8 +30,7 @@ function Prompt(w, h, promptName, promptId) {
     drag(basicPromptName);
     setTimeout(() => {
         reqField(basicPromptDiv);
-    }
-        , 50);
+    }, 50);
     this.promptButton = function (buttonText, buttonFunction, buttonType) {
         promptButtonSpan = $cE("input");
         promptButtonSpan.setAttribute("class", "promptButtonSpan");
@@ -40,8 +38,7 @@ function Prompt(w, h, promptName, promptId) {
         promptButtonSpan.setAttribute("type", buttonType);
         promptButtonsDiv.appendChild(promptButtonSpan);
         promptButtonSpan.value = buttonText;
-    }
-        ;
+    };
     this.promptSpan = function (spanText, center) {
         promptSpan = $cE("span");
         promptSpan.setAttribute("class", "promptSpan");
@@ -50,8 +47,7 @@ function Prompt(w, h, promptName, promptId) {
         }
         basicPromptContent.appendChild(promptSpan);
         promptSpan.innerHTML = spanText;
-    }
-        ;
+    };
     this.promptWindow = function (w, h) {
         let promptWindow = $cE("div");
         promptWindow.setAttribute("class", "promptWindow");
@@ -210,7 +206,7 @@ function About(softName, version, developer, license, webSite) {
     promptContent.parentNode.style.height = "60" + "vh";
     promptContent.parentNode.style.width = "60" + "vh";
     promptContent.parentNode.style.top = "20" + "vh";
-    promptContent.parentNode.style.left = "calc(50" + widthMetric + " - 30" + "vh" + ")";
+    promptContent.parentNode.style.left = "calc(50" + "vw" + " - 30" + "vh" + ")";
     let promptSpan = $("aboutAlert").getElementsByClassName("promptSpan")[0];
     promptSpan.setAttribute("id", "aboutContentSpan");
     promptSpan.innerHTML = "<img src='assets/icons/menuIconsVectors/100.svg'>";
@@ -239,6 +235,7 @@ function About(softName, version, developer, license, webSite) {
 }
 
 function showLicense(licenseFile) {
+    let mainPathToData = app.getPath("userData") + "/.Data/";
     let promptShowLicense = new Prompt(70, 90, text_license_text, "showLicense");
     promptShowLicense.promptButton(approuveButtonValue, "cancel(this, 1);", "button");
     promptShowLicense.promptWindow(80, 76);
@@ -276,7 +273,7 @@ function SearchPrompt(arr, fun, exitFun, imgArr, id) {
                 clientSpan[i].style.display = "none";
             }
         }
-    }
+    };
 
     for (let i = 0;
         i < arr.length;
@@ -327,7 +324,7 @@ function closeSP() {
 
 let sP_promptContent_Height;
 function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction) {
-    sP_wMetric = w + widthMetric;
+    sP_wMetric = w + "vw";
     sP_hMetric = h + "vh";
     sP_basicPromptDiv = $cE("div");
     sP_basicPromptName = $cE("span");
@@ -337,7 +334,7 @@ function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction
     sP_basicPromptDiv.style.width = sP_wMetric;
     sP_basicPromptDiv.style.height = sP_hMetric;
     sP_basicPromptDiv.style.top = "calc(50vh - " + h / 2 + "vh" + ")";
-    sP_basicPromptDiv.style.left = "calc(50vw - " + w / 2 + widthMetric + ")";
+    sP_basicPromptDiv.style.left = "calc(50vw - " + w / 2 + "vw" + ")";
     sP_basicPromptName.setAttribute("class", "sP_promptNameSpan");
     sP_basicPromptName.innerHTML = promptName;
     document.body.appendChild(sP_basicPromptDiv);

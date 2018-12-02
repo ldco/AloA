@@ -4,7 +4,6 @@
   "description": "yet another level of abstraction",
   "main": "dist/aloajs.min.js",
   "scripts": {
-    "doc": "documentation build js/** -f html -o docs",
     "dev": "babel js -o dist/aloajs.min.js -w",
     "g": "./git.sh"
   },
