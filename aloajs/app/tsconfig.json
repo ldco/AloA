@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "es3",
+        "module": "system",
+        "allowJs": true,
+        "checkJs": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "outFile": "dist/aloajs.js",
+        "preserveConstEnums": true,
+        "sourceMap": false
+    },
+    "include": [
+        "ts/*"
+    ],
+    "exclude": []
+}

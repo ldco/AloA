@@ -221,7 +221,7 @@ const audio = (file) => {
 //HTML constractor
 function ConstHTML(tag, _id, _class, parent, ...attrib) {
 
-    x = document.createElement(tag);
+    let x = document.createElement(tag);
     if (_id) { x.setAttribute("id", _id); }
 
     if (_class) { x.setAttribute("class", _class); }

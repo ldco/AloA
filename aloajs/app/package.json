@@ -4,8 +4,10 @@
   "description": "yet another level of abstraction",
   "main": "dist/aloajs.min.js",
   "scripts": {
-    "dev": "babel js -o dist/aloajs.min.js -w",
-    "g": "./git.sh"
+    "ts": "tsc -w",
+    "devBabel": "babel js -o dist/aloajs.min.js -w",
+    "dev": "npm run ts",
+    "g": "../../git.sh"
   },
   "repository": {
     "type": "git",
