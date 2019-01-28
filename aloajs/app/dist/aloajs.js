@@ -1,3 +1,75 @@
+var approuveButtonValue = "\u05D0\u05E9\u05E8";
+var enterButtonValue = "\u05DB\u05E0\u05E1";
+var exitButtonValue = "\u05E6\u05D0";
+var submitButtonValue = "\u05E9\u05DC\u05D7";
+var cancelButtonValue = "\u05D1\u05D8\u05DC";
+var closeButtonValue = "\u05E1\u05D2\u05D5\u05E8";
+var refreshButtonValue = "\u05E8\u05E2\u05E0\u05DF";
+var closeSP_text = "\u05D0\u05DD \u05EA\u05E1\u05D2\u05D5\u05E8 \u05DB\u05DC \u05D4\u05DE\u05D9\u05D3\u05E2 <br> \u05E9\u05D4\u05D6\u05E0\u05EA \u05DB\u05E2\u05EA \u05D9\u05DE\u05D7\u05E7!";
+var text_message_text = "\u05D4\u05D5\u05D3\u05E2\u05D4";
+var reqFielD_text = "\u05E9\u05D3\u05D4 \u05D7\u05D5\u05D1\u05D4";
+var reqFieldS_text = "\u05E9\u05D3\u05D5\u05EA \u05D7\u05D5\u05D1\u05D4";
+var please_reqFields_text = "\u05E0\u05D0 \u05DC\u05DE\u05DC\u05D0 \u05E9\u05D3\u05D5\u05EA \u05D7\u05D5\u05D1\u05D4";
+var clientAlreadyExist_text = "\u05DC\u05E7\u05D5\u05D7 \u05D1\u05E9\u05DD \u05D6\u05D4 \u05DB\u05D1\u05E8 \u05E7\u05D9\u05D9\u05DD \u05D1\u05DE\u05E2\u05E8\u05DB\u05EA";
+var text_settings_text = "\u05D4\u05D2\u05D3\u05E8\u05D5\u05EA";
+var text_license_text = "\u05E8\u05E9\u05D9\u05D5\u05DF \u05EA\u05DB\u05E0\u05D4";
+var text_aboutSoftware_text = "\u05E2\u05DC \u05D4\u05EA\u05D5\u05DB\u05E0\u05D4";
+var text_wrongPassword_text = "\u05E1\u05D9\u05E1\u05DE\u05D4 \u05E9\u05D2\u05D5\u05D9\u05D4!";
+var text_clientList_text = "\u05E8\u05E9\u05D9\u05DE\u05EA \u05DC\u05E7\u05D5\u05D7\u05D5\u05EA";
+var text_clients_text = "\u05DC\u05E7\u05D5\u05D7\u05D5\u05EA";
+var text_newClient_text = "\u05DC\u05E7\u05D5\u05D7 \u05D7\u05D3\u05E9";
+var text_clientName_text = "\u05E9\u05DD \u05DC\u05E7\u05D5\u05D7";
+var text_Name_text = "\u05E9\u05DD";
+var text_clientNum_text = "\u05DE\u05E1' \u05DC\u05E7\u05D5\u05D7";
+var text_companyOfficialNum_text = "\u05DE\u05E1' \u05E2\u05D5\u05E1\u05E7 \u05DE\u05D5\u05E8\u05E9\u05D4";
+var text_date_text = "\u05EA\u05D0\u05E8\u05D9\u05DA";
+var text_document_text = "\u05DE\u05E1\u05DE\u05DA";
+var text_contactName_text = "\u05D0\u05D9\u05E9 \u05E7\u05E9\u05E8";
+var text_telNum_text = "\u05DE\u05E1' \u05D8\u05DC\u05E4\u05D5\u05DF";
+var text_telNum2_text = "\u05DE\u05E1' \u05D8\u05DC\u05E4\u05D5\u05DF \u05E0\u05D5\u05E1\u05E3";
+var text_faxNum_text = "\u05DE\u05E1' \u05E4\u05E7\u05E1";
+var text_mail_text = "\u05DE\u05D9\u05D9\u05DC";
+var text_adress_text = "\u05DB\u05EA\u05D5\u05D1\u05EA";
+var text_comments_text = "\u05D4\u05E2\u05E8\u05D5\u05EA";
+var text_mainMenu_text = "\u05EA\u05E4\u05E8\u05D9\u05D8 \u05E8\u05D0\u05E9\u05D9";
+var text_items_text = "\u05E4\u05E8\u05D9\u05D8\u05D9\u05DD";
+var text_item_text = "\u05E4\u05E8\u05D9\u05D8";
+var text_invoiceS_text = "\u05D7\u05E9\u05D1\u05D5\u05E0\u05D9\u05D5\u05EA";
+var text_invoice_text = "\u05D7\u05E9\u05D1\u05D5\u05E0\u05D9\u05EA";
+var text_tax_text = "\u05DE\u05E1";
+var text_reciept_text = "\u05E7\u05D1\u05DC\u05D4";
+var text_Invoice_text = text_invoice_text + " " + text_tax_text;
+var text_newInvoice_text = text_invoice_text + " " + text_tax_text + " " + "\u05D7\u05D3\u05E9\u05D4";
+var text_InvoiceReciept_text = text_Invoice_text + "/" + text_reciept_text;
+var text_Invoice_BR_Reciept_text = text_invoice_text + "</br>" + text_tax_text + "/" + text_reciept_text;
+var text_number_text = "\u05DE\u05E1\u05E4\u05E8";
+var text_N_text = "\u05DE\u05E1'";
+var text_round_text = "\u05E2\u05D2\u05DC";
+var text_amount_text = "\u05DB\u05DE\u05D5\u05EA";
+var text_price_text = "\u05DE\u05D7\u05D9\u05E8";
+var text_sum_text = "\u05E1\u05DB\u05D5\u05DD";
+var text_Receipts_text = "\u05EA\u05E7\u05D1\u05D5\u05DC\u05D9\u05DD";
+var text_Balance_text = "\u05D9\u05EA\u05E8\u05EA \u05D7\u05D5\u05D1";
+var text_total_text = "\u05E1\u05D4\"\u05DB";
+var text_VAT_text = "\u05DE\u05E2\"\u05DD";
+var text_promo_text = "\u05D4\u05E0\u05D7\u05D4";
+var text_status_text = "\u05DE\u05E6\u05D1";
+var text_totalAfterPromo_text = "\u05E1\u05D4\"\u05DB \u05D0\u05D7\u05E8\u05D9 \u05D4\u05E0\u05D7\u05D4";
+var text_totalTOTAL_text = "\u05E1\u05D4\"\u05DB \u05DC\u05EA\u05E9\u05DC\u05D5\u05DD";
+var text_calculcator_text = "\u05DE\u05D7\u05E9\u05D1\u05D5\u05DF \u05DE\u05D4\u05D9\u05E8";
+var text_COPY_text = "\u05D4\u05E2\u05EA\u05E7";
+var text_credits1_text = "\u05D4\u05D7\u05E9\u05D1\u05D5\u05E0\u05D9\u05EA \u05D4\u05D5\u05E4\u05E7\u05D4 \u05E2\"\u05D9 \u05EA\u05D5\u05DB\u05E0\u05EA \"\u05E0\u05D9\u05D5 \u05D0\u05D5\u05E8\u05D3\u05E8 \u05E1\u05D9.\u05D0\u05E8.\u05D0\u05DD\"";
+var text_original_value_True_text = "\u05DE\u05E7\u05D5\u05E8";
+var text_original_value_Canceled_text = "\u05DE\u05D1\u05D5\u05D8\u05DC";
+var text_forWhom_text = "\u05DC\u05DB\u05D1\u05D5\u05D3";
+var text_ErrorTryAgain_text = "\u05D0\u05D9\u05E8\u05E2\u05D4 \u05E9\u05D2\u05D9\u05D0\u05D4 \u05E0\u05E1\u05D4 \u05E9\u05D5\u05D1";
+var text_SuccessOperation_text = "\u05D4\u05E4\u05E2\u05D5\u05DC\u05D4 \u05E2\u05D1\u05E8\u05D4 \u05D1\u05D4\u05E6\u05DC\u05D7\u05D4";
+var text_Invoice_SuccessOperation_text = "\u05D7\u05E9\u05D1\u05D5\u05E0\u05D9\u05EA \u05DE\u05E1 \u05D4\u05D5\u05E4\u05E7\u05D4 \u05D1\u05D4\u05E6\u05DC\u05D7\u05D4";
+var text_Invoice_SendMailOrNot_text = "\u05DC\u05E9\u05DC\u05D5\u05D7 \u05D0\u05EA \u05D4\u05DE\u05E7\u05D5\u05E8 \u05DC\u05DC\u05E7\u05D5\u05D7?";
+var text_Invoice_SendMailOrNot2_text = "\u05DC\u05E9\u05DC\u05D5\u05D7 \u05D0\u05EA \u05D4\u05DE\u05E1\u05DE\u05DA \u05DC\u05DB\u05EA\u05D5\u05D1\u05EA:";
+var text_MailSent_text = "\u05D4\u05DE\u05D9\u05D9\u05DC \u05E0\u05E9\u05DC\u05D7 \u05D1\u05D4\u05E6\u05DC\u05D7\u05D4";
+var text_NoMailReciever_text = "\u05DB\u05EA\u05D5\u05D1\u05EA \u05D4\u05DE\u05D9\u05D9\u05DC \u05D0\u05D9\u05E0\u05D4 \u05E0\u05DB\u05D5\u05E0\u05D4";
+var text_SendedByNewOrder_text = "\u05DE\u05D9\u05D9\u05DC \u05D6\u05D4 \u05E0\u05E9\u05DC\u05D7 \u05E2\"\u05D9 \u05EA\u05D5\u05DB\u05E0\u05EA \u05E0\u05D9\u05D5 \u05D0\u05D5\u05E8\u05D3\u05E8 \u05E1\u05D9.\u05D0\u05E8.\u05D0\u05DD";
 var $dN = function () {
     var x = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -17,16 +89,9 @@ var $dF = function () {
     }
 };
 var r_emove = function (x) {
-    if (x.hasChildNodes()) {
-        for (var i = 0; i < x.childNodes.length; i++) {
-            x.childNodes[i] = x.childNodes[i].cloneNode(true);
-            for (var l = 0; l < x.childNodes[i].length; l++) {
-                x.childNodes[i].parentNode.replaceChild(x.childNodes[i][l], x);
-            }
-            x.childNodes[i].remove();
-        }
+    while (x.firstChild) {
+        x.removeChild(x.firstChild);
     }
-    x.remove();
 };
 var $dR = function () {
     var x = [];
@@ -185,8 +250,8 @@ function ConstHTML(tag, _id, _class, parent) {
         x.setAttribute("class", _class);
     }
     for (var i = 0; i < attrib.length; i++) {
-        atr = attrib[i].substring(attrib[i].lastIndexOf('"') + 1, attrib[i].lastIndexOf('&'));
-        val = attrib[i].substring(attrib[i].lastIndexOf('&') + 1);
+        var atr = attrib[i].substring(attrib[i].lastIndexOf('"') + 1, attrib[i].lastIndexOf('&'));
+        var val = attrib[i].substring(attrib[i].lastIndexOf('&') + 1);
         x.setAttribute(atr, val);
     }
     parent.appendChild(x);
@@ -256,6 +321,9 @@ function TypeW(id, speed) {
         _loop_1(i);
     }
 }
+function round(value, decimals) {
+    return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
+}
 function Prompt(w, h, promptName, promptId) {
     var wMetric = w + "vh";
     var hMetric = h + "vh";
@@ -265,7 +333,7 @@ function Prompt(w, h, promptName, promptId) {
     var promptButtonsDiv = $cE("div");
     basicPromptDiv.setAttribute("class", "promptMixin");
     basicPromptDiv.setAttribute("id", promptId);
-    thisPromptId = basicPromptDiv.id;
+    var thisPromptId = basicPromptDiv.id;
     basicPromptDiv.style.width = wMetric;
     basicPromptDiv.style.height = hMetric;
     basicPromptDiv.style.top = "calc(50vh - " + h / 2 + "vh" + ")";
@@ -281,7 +349,7 @@ function Prompt(w, h, promptName, promptId) {
     document.body.appendChild(basicPromptDiv);
     $("blackDiv").style.display = "flex";
     basicPromptDiv.appendChild(promptButtonsDiv);
-    promptDrag = $cE("span");
+    var promptDrag = $cE("span");
     promptDrag.setAttribute("class", "promptDrag");
     basicPromptDiv.appendChild(promptDrag);
     drag(promptDrag);
@@ -290,7 +358,7 @@ function Prompt(w, h, promptName, promptId) {
         reqField(basicPromptDiv);
     }, 50);
     this.promptButton = function (buttonText, buttonFunction, buttonType) {
-        promptButtonSpan = $cE("input");
+        var promptButtonSpan = $cE("input");
         promptButtonSpan.setAttribute("class", "promptButtonSpan");
         promptButtonSpan.setAttribute("onclick", buttonFunction);
         promptButtonSpan.setAttribute("type", buttonType);
@@ -298,7 +366,7 @@ function Prompt(w, h, promptName, promptId) {
         promptButtonSpan.value = buttonText;
     };
     this.promptSpan = function (spanText, center) {
-        promptSpan = $cE("span");
+        var promptSpan = $cE("span");
         promptSpan.setAttribute("class", "promptSpan");
         if (center === 1) {
             promptSpan.setAttribute("class", "promptSpan center");
@@ -318,10 +386,10 @@ function Prompt(w, h, promptName, promptId) {
     this.promptInput = function (inputHeader, inputType, inputPattern, req, counter) {
         var inputId = thisPromptId + "_input";
         var inputName = inputId;
-        promptInputDiv = $cE("div");
+        var promptInputDiv = $cE("div");
         promptInputDiv.setAttribute("class", "inputDiv");
         promptInputDiv.style["text-align"] = direction;
-        promptInput = $cE("input");
+        var promptInput = $cE("input");
         promptInput.setAttribute("id", inputId + counter);
         promptInput.setAttribute("name", inputName);
         promptInput.setAttribute("class", "inputClass");
@@ -346,16 +414,16 @@ function Prompt(w, h, promptName, promptId) {
     this.promptTextArea = function (inputHeader, cols, rows, counter) {
         var inputId = thisPromptId + "_textarea";
         var inputName = inputId;
-        promptTextAreaDiv = $cE("div");
+        var promptTextAreaDiv = $cE("div");
         promptTextAreaDiv.setAttribute("class", "inputDiv");
         promptTextAreaDiv.style["text-align"] = direction;
-        promptTextArea = $cE("textarea");
+        var promptTextArea = $cE("textarea");
         promptTextArea.setAttribute("id", inputId + counter);
         promptTextArea.setAttribute("name", inputName);
         promptTextArea.setAttribute("class", "inputClass");
         promptTextArea.setAttribute("rows", rows);
         promptTextArea.setAttribute("cols", cols);
-        inputHeaderSpan = $cE("span");
+        var inputHeaderSpan = $cE("span");
         inputHeaderSpan.innerHTML = inputHeader;
         basicPromptContent.appendChild(promptTextAreaDiv);
         promptTextAreaDiv.appendChild(inputHeaderSpan);
@@ -397,7 +465,7 @@ function PromptYesNo(yesno_text, yesno_id, cancelEverything, func) {
     yesno_prompt.promptSpan(yesno_text);
     yesno_prompt.promptButton(cancelButtonValue, cancelType, "button");
     yesno_prompt.promptButton(approuveButtonValue, func, "button");
-    yesno_header = $(yesno_id).getElementsByClassName("promptNameSpan")[0];
+    var yesno_header = $(yesno_id).getElementsByClassName("promptNameSpan")[0];
     yesno_header.className += " red";
     $("blackDiv").style.zIndex = "101";
     $(yesno_id).style.zIndex = "102";
@@ -407,8 +475,8 @@ function reqField(x) {
     var requiredField = x.getElementsByClassName("requiredField");
     if (requiredField.length > 1) {
         requiredField.required = true;
-        requiredDiv = $cE("div");
-        requiredSpan = $cE("span");
+        var requiredDiv = $cE("div");
+        var requiredSpan = $cE("span");
         requiredSpan.setAttribute("class", "red small asterix");
         requiredDiv.style["text-align"] = direction;
         requiredDiv.setAttribute("class", "isReq");
@@ -465,7 +533,7 @@ function About(softName, version, developer, license, webSite) {
     licenseSpan.innerHTML = "License: " + "<span id='showLicenseSpan' onclick='showLicense(" + '"' + license + '"' + ")'>" + license + "</span>";
     var webSiteSpan = $cE("span");
     webSiteSpan.setAttribute("onclick", "goToWebSite()");
-    goToWebSite = function () {
+    var goToWebSite = function () {
         if (opn) {
             opn("http://" + webSite);
         }
@@ -474,7 +542,7 @@ function About(softName, version, developer, license, webSite) {
         }
     };
     webSiteSpan.innerHTML = "Please visit " + "<span id='urlWebSiteSpan'>" + webSite + "</span>";
-    aboutInfoDiv = $cE("div");
+    var aboutInfoDiv = $cE("div");
     aboutInfoDiv.setAttribute("id", "aboutInfoDiv");
     promptContent.appendChild(aboutInfoDiv);
     aboutInfoDiv.appendChild(versionSpan);
@@ -488,7 +556,7 @@ function showLicense(licenseFile) {
     promptShowLicense.promptButton(approuveButtonValue, "cancel(this, 1);", "button");
     promptShowLicense.promptWindow(80, 76);
     var x = mainPathToData + licenseFile + ".txt";
-    licenseWindowClass = $c("promptWindow")[0];
+    var licenseWindowClass = $c("promptWindow")[0];
     licenseWindowClass.style.textAlign = "left";
     licenseWindowClass.innerHTML = fs.readFileSync(x, 'utf8');
 }
@@ -497,15 +565,15 @@ function SearchPrompt(arr, fun, exitFun, imgArr, id) {
     var win = SearchPromptPrompt.promptWindow(80, 50);
     SearchPromptPrompt.promptButton(cancelButtonValue, exitFun, "button");
     SearchPromptPrompt.promptInput("", "text", "", 0, 0);
-    el = $("SearchPromptPrompt" + id).getElementsByTagName("input")[0];
+    var el = $("SearchPromptPrompt" + id).getElementsByTagName("input")[0];
     el.setAttribute("onkeyup", "searchFromDataFun()");
     el.style.backgroundPosition = direction;
     el.parentNode.className += " search";
-    searchFromDataFun = function () {
+    var searchFromDataFun = function () {
         var filter = el.value;
         var clientSpan = $c("searchDataSpan");
         for (var i = 0; i < clientSpan.length; i++) {
-            n = clientSpan[i].getElementsByTagName("span")[0];
+            var n = clientSpan[i].getElementsByTagName("span")[0];
             if (n.innerHTML.indexOf(filter) > -1) {
                 clientSpan[i].style.display = "";
             }
@@ -516,16 +584,16 @@ function SearchPrompt(arr, fun, exitFun, imgArr, id) {
     };
     for (var i = 0; i < arr.length; i++) {
         if (imgArr === true) {
-            searchDataImg = document.createElement("img");
+            var searchDataImg = document.createElement("img");
             searchDataImg.setAttribute("class", "searchDataImg");
             searchDataImg.setAttribute("src", imgArr[i]);
             searchDataSpan.appendChild(searchDataImg);
         }
-        searchDataSpan = document.createElement("span");
+        var searchDataSpan = document.createElement("span");
         searchDataSpan.setAttribute("class", "searchDataSpan");
         searchDataSpan.classList.add("searchDataSpan" + id);
         $c("promptWindow")[0].appendChild(searchDataSpan);
-        searchDataName = document.createElement("span");
+        var searchDataName = document.createElement("span");
         searchDataName.setAttribute("class", "searchDataName");
         if (fun) {
             searchDataSpan.addEventListener("click", function () {
@@ -552,13 +620,13 @@ function closeSP() {
 }
 var sP_promptContent_Height;
 function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction) {
-    sP_wMetric = w + "vw";
-    sP_hMetric = h + "vh";
-    sP_basicPromptDiv = $cE("div");
-    sP_basicPromptName = $cE("span");
+    var sP_wMetric = w + "vw";
+    var sP_hMetric = h + "vh";
+    var sP_basicPromptDiv = $cE("div");
+    var sP_basicPromptName = $cE("span");
     sP_basicPromptDiv.setAttribute("class", "sP_promptMixin");
     sP_basicPromptDiv.setAttribute("id", promptId);
-    sP_thisPromptId = sP_basicPromptDiv.id;
+    var sP_thisPromptId = sP_basicPromptDiv.id;
     sP_basicPromptDiv.style.width = sP_wMetric;
     sP_basicPromptDiv.style.height = sP_hMetric;
     sP_basicPromptDiv.style.top = "calc(50vh - " + h / 2 + "vh" + ")";
@@ -567,9 +635,9 @@ function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction
     sP_basicPromptName.innerHTML = promptName;
     document.body.appendChild(sP_basicPromptDiv);
     $("blackDiv").style.display = "flex";
-    sP_promptDrag = $cE("span");
-    sP_promptDrag_closeBut = $cE("img");
-    sP_promptDrag_maxBut = $cE("img");
+    var sP_promptDrag = $cE("span");
+    var sP_promptDrag_closeBut = $cE("img");
+    var sP_promptDrag_maxBut = $cE("img");
     sP_promptDrag_closeBut.setAttribute("src", menuIconsImagesFolder + "window-close.svg");
     sP_promptDrag_closeBut.setAttribute("onclick", "closeSP()");
     sP_promptDrag_maxBut.setAttribute("src", menuIconsImagesFolder + "window-maximize.svg");
@@ -582,12 +650,12 @@ function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction
     drag(sP_promptDrag, moreFunction);
     sp_buttonSubmitCancel_div = $cE("div");
     sp_buttonSubmitCancel_div.setAttribute("class", "sp_buttonSubmitCancel_div");
-    sp_buttonSubmit = $cE("input");
+    var sp_buttonSubmit = $cE("input");
     sp_buttonSubmit.setAttribute("type", "button");
     sp_buttonSubmit.setAttribute("onclick", submitFunc);
     sp_buttonSubmit.setAttribute("class", "sp_buttonSubmitCancel");
     sp_buttonSubmit.value = submitButtonValue;
-    sp_buttonCancel = $cE("input");
+    var sp_buttonCancel = $cE("input");
     sp_buttonCancel.setAttribute("type", "button");
     sp_buttonCancel.setAttribute("onclick", "cancel(this, 0)");
     sp_buttonCancel.setAttribute("class", "sp_buttonSubmitCancel");
@@ -598,7 +666,7 @@ function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction
     var buttonsSizeH = $c("sp_buttonSubmitCancel_div")[0].offsetHeight;
     var headSizeH = $c("sP_promptDrag")[0].offsetHeight;
     var buttonBottom = sP_promptContent_Height = sP_basicPromptDiv.offsetHeight - (parseInt(buttonsSizeH) + parseInt(headSizeH));
-    sP_basicPromptContent = $cE("div");
+    var sP_basicPromptContent = $cE("div");
     sP_basicPromptContent.setAttribute("class", "sP_promptContent");
     sP_basicPromptContent.setAttribute("id", promptId + "_sP_promptContent");
     sP_basicPromptContent.style["text-align"] = direction;
@@ -612,7 +680,7 @@ function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction
     var zero = 0;
     for (var i = 0; i < grids; i++) {
         var counter = zero++;
-        gridElement = $cE("div");
+        var gridElement = $cE("div");
         gridElement.setAttribute("class", promptId + "_sP_promptGridEl");
         gridElement.setAttribute("id", promptId + "_sP_promptGridEl_" + counter);
         sP_basicPromptContent.appendChild(gridElement);

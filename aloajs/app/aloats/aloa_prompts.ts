@@ -7,7 +7,7 @@ function Prompt(w, h, promptName, promptId) {
     let promptButtonsDiv = $cE("div");
     basicPromptDiv.setAttribute("class", "promptMixin");
     basicPromptDiv.setAttribute("id", promptId);
-    thisPromptId = basicPromptDiv.id;
+    let thisPromptId = basicPromptDiv.id;
     basicPromptDiv.style.width = wMetric;
     basicPromptDiv.style.height = hMetric;
     basicPromptDiv.style.top = "calc(50vh - " + h / 2 + "vh" + ")";
@@ -23,7 +23,7 @@ function Prompt(w, h, promptName, promptId) {
     document.body.appendChild(basicPromptDiv);
     $("blackDiv").style.display = "flex";
     basicPromptDiv.appendChild(promptButtonsDiv);
-    promptDrag = $cE("span");
+    let promptDrag = $cE("span");
     promptDrag.setAttribute("class", "promptDrag");
     basicPromptDiv.appendChild(promptDrag);
     drag(promptDrag);
@@ -32,7 +32,7 @@ function Prompt(w, h, promptName, promptId) {
         reqField(basicPromptDiv);
     }, 50);
     this.promptButton = function (buttonText, buttonFunction, buttonType) {
-        promptButtonSpan = $cE("input");
+        let promptButtonSpan = $cE("input");
         promptButtonSpan.setAttribute("class", "promptButtonSpan");
         promptButtonSpan.setAttribute("onclick", buttonFunction);
         promptButtonSpan.setAttribute("type", buttonType);
@@ -40,7 +40,7 @@ function Prompt(w, h, promptName, promptId) {
         promptButtonSpan.value = buttonText;
     };
     this.promptSpan = function (spanText, center) {
-        promptSpan = $cE("span");
+        let promptSpan = $cE("span");
         promptSpan.setAttribute("class", "promptSpan");
         if (center === 1) {
             promptSpan.setAttribute("class", "promptSpan center");
@@ -61,10 +61,10 @@ function Prompt(w, h, promptName, promptId) {
     this.promptInput = function (inputHeader, inputType, inputPattern, req, counter) {
         let inputId = thisPromptId + "_input";
         let inputName = inputId;
-        promptInputDiv = $cE("div");
+        let promptInputDiv = $cE("div");
         promptInputDiv.setAttribute("class", "inputDiv");
         promptInputDiv.style["text-align"] = direction;
-        promptInput = $cE("input");
+        let promptInput = $cE("input");
         promptInput.setAttribute("id", inputId + counter);
         promptInput.setAttribute("name", inputName);
         promptInput.setAttribute("class", "inputClass");
@@ -90,16 +90,16 @@ function Prompt(w, h, promptName, promptId) {
     this.promptTextArea = function (inputHeader, cols, rows, counter) {
         let inputId = thisPromptId + "_textarea";
         let inputName = inputId;
-        promptTextAreaDiv = $cE("div");
+        let promptTextAreaDiv = $cE("div");
         promptTextAreaDiv.setAttribute("class", "inputDiv");
         promptTextAreaDiv.style["text-align"] = direction;
-        promptTextArea = $cE("textarea");
+        let promptTextArea = $cE("textarea");
         promptTextArea.setAttribute("id", inputId + counter);
         promptTextArea.setAttribute("name", inputName);
         promptTextArea.setAttribute("class", "inputClass");
         promptTextArea.setAttribute("rows", rows);
         promptTextArea.setAttribute("cols", cols);
-        inputHeaderSpan = $cE("span");
+        let inputHeaderSpan = $cE("span");
         inputHeaderSpan.innerHTML = inputHeader;
         basicPromptContent.appendChild(promptTextAreaDiv);
         promptTextAreaDiv.appendChild(inputHeaderSpan);
@@ -144,7 +144,7 @@ function PromptYesNo(yesno_text, yesno_id, cancelEverything, func) {
     yesno_prompt.promptSpan(yesno_text);
     yesno_prompt.promptButton(cancelButtonValue, cancelType, "button");
     yesno_prompt.promptButton(approuveButtonValue, func, "button");
-    yesno_header = $(yesno_id).getElementsByClassName("promptNameSpan")[0];
+    let yesno_header = $(yesno_id).getElementsByClassName("promptNameSpan")[0];
     yesno_header.className += " red";
     $("blackDiv").style.zIndex = "101";
     $(yesno_id).style.zIndex = "102";
@@ -155,8 +155,8 @@ function reqField(x) {
     let requiredField = x.getElementsByClassName("requiredField");
     if (requiredField.length > 1) {
         requiredField.required = true;
-        requiredDiv = $cE("div");
-        requiredSpan = $cE("span");
+        let requiredDiv = $cE("div");
+        let requiredSpan = $cE("span");
         requiredSpan.setAttribute("class", "red small asterix");
         requiredDiv.style["text-align"] = direction;
         requiredDiv.setAttribute("class", "isReq");
@@ -218,14 +218,14 @@ function About(softName, version, developer, license, webSite) {
     licenseSpan.innerHTML = "License: " + "<span id='showLicenseSpan' onclick='showLicense(" + '"' + license + '"' + ")'>" + license + "</span>";
     let webSiteSpan = $cE("span");
     webSiteSpan.setAttribute("onclick", "goToWebSite()");
-    goToWebSite = function () {
+    const goToWebSite = function () {
         if (opn) { opn("http://" + webSite); }
         else { window.location = "http://" + webSite; }
 
     }
         ;
     webSiteSpan.innerHTML = "Please visit " + "<span id='urlWebSiteSpan'>" + webSite + "</span>";
-    aboutInfoDiv = $cE("div");
+    let aboutInfoDiv = $cE("div");
     aboutInfoDiv.setAttribute("id", "aboutInfoDiv");
     promptContent.appendChild(aboutInfoDiv);
     aboutInfoDiv.appendChild(versionSpan);
@@ -240,7 +240,7 @@ function showLicense(licenseFile) {
     promptShowLicense.promptButton(approuveButtonValue, "cancel(this, 1);", "button");
     promptShowLicense.promptWindow(80, 76);
     let x = mainPathToData + licenseFile + ".txt";
-    licenseWindowClass = $c("promptWindow")[0];
+    let licenseWindowClass = $c("promptWindow")[0];
     licenseWindowClass.style.textAlign = "left";
     licenseWindowClass.innerHTML = fs.readFileSync(x, 'utf8');
 }
@@ -253,19 +253,19 @@ function SearchPrompt(arr, fun, exitFun, imgArr, id) {
     SearchPromptPrompt.promptButton(cancelButtonValue, exitFun, "button");
 
     SearchPromptPrompt.promptInput("", "text", "", 0, 0);
-    el = $("SearchPromptPrompt" + id).getElementsByTagName("input")[0];
+    let el = $("SearchPromptPrompt" + id).getElementsByTagName("input")[0];
     el.setAttribute("onkeyup", "searchFromDataFun()");
     el.style.backgroundPosition = direction;
     el.parentNode.className += " search";
 
-    searchFromDataFun = function () {
+    const searchFromDataFun = function () {
 
         let filter = el.value;
         let clientSpan = $c("searchDataSpan");
         for (let i = 0;
             i < clientSpan.length;
             i++) {
-            n = clientSpan[i].getElementsByTagName("span")[0];
+            let n = clientSpan[i].getElementsByTagName("span")[0];
             if (n.innerHTML.indexOf(filter) > -1) {
                 clientSpan[i].style.display = "";
             }
@@ -279,17 +279,17 @@ function SearchPrompt(arr, fun, exitFun, imgArr, id) {
         i < arr.length;
         i++) {
         if (imgArr === true) {
-            searchDataImg = document.createElement("img");
+            let searchDataImg = document.createElement("img");
             searchDataImg.setAttribute("class", "searchDataImg");
             searchDataImg.setAttribute("src", imgArr[i]);
             searchDataSpan.appendChild(searchDataImg);
         }
-        searchDataSpan = document.createElement("span");
+        let searchDataSpan = document.createElement("span");
         searchDataSpan.setAttribute("class", "searchDataSpan");
         searchDataSpan.classList.add("searchDataSpan" + id);
 
         $c("promptWindow")[0].appendChild(searchDataSpan);
-        searchDataName = document.createElement("span");
+        let searchDataName = document.createElement("span");
 
         searchDataName.setAttribute("class", "searchDataName");
         if (fun) {
@@ -324,13 +324,13 @@ function closeSP() {
 
 let sP_promptContent_Height;
 function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction) {
-    sP_wMetric = w + "vw";
-    sP_hMetric = h + "vh";
-    sP_basicPromptDiv = $cE("div");
-    sP_basicPromptName = $cE("span");
+    let sP_wMetric = w + "vw";
+    let sP_hMetric = h + "vh";
+    let sP_basicPromptDiv = $cE("div");
+    let sP_basicPromptName = $cE("span");
     sP_basicPromptDiv.setAttribute("class", "sP_promptMixin");
     sP_basicPromptDiv.setAttribute("id", promptId);
-    sP_thisPromptId = sP_basicPromptDiv.id;
+    let sP_thisPromptId = sP_basicPromptDiv.id;
     sP_basicPromptDiv.style.width = sP_wMetric;
     sP_basicPromptDiv.style.height = sP_hMetric;
     sP_basicPromptDiv.style.top = "calc(50vh - " + h / 2 + "vh" + ")";
@@ -339,9 +339,9 @@ function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction
     sP_basicPromptName.innerHTML = promptName;
     document.body.appendChild(sP_basicPromptDiv);
     $("blackDiv").style.display = "flex"; //head bar
-    sP_promptDrag = $cE("span");
-    sP_promptDrag_closeBut = $cE("img");
-    sP_promptDrag_maxBut = $cE("img");
+    let sP_promptDrag = $cE("span");
+    let sP_promptDrag_closeBut = $cE("img");
+    let sP_promptDrag_maxBut = $cE("img");
     sP_promptDrag_closeBut.setAttribute("src", menuIconsImagesFolder + "window-close.svg");
     sP_promptDrag_closeBut.setAttribute("onclick", "closeSP()");
     sP_promptDrag_maxBut.setAttribute("src", menuIconsImagesFolder + "window-maximize.svg");
@@ -354,12 +354,12 @@ function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction
     drag(sP_promptDrag, moreFunction); //buttons
     sp_buttonSubmitCancel_div = $cE("div");
     sp_buttonSubmitCancel_div.setAttribute("class", "sp_buttonSubmitCancel_div");
-    sp_buttonSubmit = $cE("input");
+    let sp_buttonSubmit = $cE("input");
     sp_buttonSubmit.setAttribute("type", "button");
     sp_buttonSubmit.setAttribute("onclick", submitFunc);
     sp_buttonSubmit.setAttribute("class", "sp_buttonSubmitCancel");
     sp_buttonSubmit.value = submitButtonValue;
-    sp_buttonCancel = $cE("input");
+    let sp_buttonCancel = $cE("input");
     sp_buttonCancel.setAttribute("type", "button");
     sp_buttonCancel.setAttribute("onclick", "cancel(this, 0)");
     sp_buttonCancel.setAttribute("class", "sp_buttonSubmitCancel");
@@ -370,7 +370,7 @@ function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction
     let buttonsSizeH = $c("sp_buttonSubmitCancel_div")[0].offsetHeight;
     let headSizeH = $c("sP_promptDrag")[0].offsetHeight;
     let buttonBottom = sP_promptContent_Height = sP_basicPromptDiv.offsetHeight - (parseInt(buttonsSizeH) + parseInt(headSizeH));
-    sP_basicPromptContent = $cE("div");
+    let sP_basicPromptContent = $cE("div");
     sP_basicPromptContent.setAttribute("class", "sP_promptContent");
     sP_basicPromptContent.setAttribute("id", promptId + "_sP_promptContent");
     sP_basicPromptContent.style["text-align"] = direction;
@@ -387,7 +387,7 @@ function SuperPrompt(w, h, promptName, promptId, grids, submitFunc, moreFunction
         i < grids;
         i++) {
         let counter = zero++;
-        gridElement = $cE("div");
+        let gridElement = $cE("div");
         gridElement.setAttribute("class", promptId + "_sP_promptGridEl");
         gridElement.setAttribute("id", promptId + "_sP_promptGridEl_" + counter);
         sP_basicPromptContent.appendChild(gridElement);

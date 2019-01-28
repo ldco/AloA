@@ -11,18 +11,11 @@ const $dF = (...x) => {
     }
 };
 
-//Remove with all childs and listeners;
+//Remove all childs;
 const r_emove = (x) => {
-    if (x.hasChildNodes()) {
-        for (let i = 0; i < x.childNodes.length; i++) {
-            x.childNodes[i] = x.childNodes[i].cloneNode(true);
-            for (let l = 0; l < x.childNodes[i].length; l++) {
-                x.childNodes[i].parentNode.replaceChild(x.childNodes[i][l], x);
-            }
-            x.childNodes[i].remove();
-        }
+    while (x.firstChild) {
+        x.removeChild(x.firstChild);
     }
-    x.remove();
 };
 
 
@@ -229,10 +222,10 @@ function ConstHTML(tag, _id, _class, parent, ...attrib) {
 
     for (let i = 0; i < attrib.length; i++) {
 
-        atr = attrib[i].substring(attrib[i].lastIndexOf('"') + 1,
+        let atr = attrib[i].substring(attrib[i].lastIndexOf('"') + 1,
             attrib[i].lastIndexOf('&'));
 
-        val = attrib[i].substring(attrib[i].lastIndexOf('&') + 1);
+        let val = attrib[i].substring(attrib[i].lastIndexOf('&') + 1);
 
         x.setAttribute(atr, val);
     }
@@ -311,4 +304,8 @@ function TypeW(id, speed) {
             createdSpans[i].style.opacity = "1";
         }, i * speed);
     }
+}
+
+function round(value: number, decimals: number) {
+    return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
 }

@@ -11,7 +11,9 @@
         "sourceMap": false
     },
     "include": [
-        "ts/*"
+        "*/*"
     ],
-    "exclude": []
+    "exclude": [
+        "dist/aloajs.js"
+    ]
 }
